@@ -25,7 +25,7 @@ export default {
             })
 
     },
-    requestBoardToSpring ({ commit }) {
+    requestBoardToSpring ({ commit }, boardId) {
         return axios.get(`http://localhost:7777/board/${boardId}`)
             .then((res) => {
                 commit(REQUEST_BOARD_TO_SPRING, res.data)
