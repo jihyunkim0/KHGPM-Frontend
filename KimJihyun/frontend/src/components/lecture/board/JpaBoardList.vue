@@ -19,7 +19,7 @@
           </td>
           <td align="left">
             <router-link :to="{ name: 'JpaBoardReadPage',
-            params: { boardId: board.boardId.toString() }}">
+                              params: { boardId: board.boardId.toString() }}">
             {{ board.title }}
             </router-link>
           </td>

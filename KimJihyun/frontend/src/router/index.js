@@ -13,7 +13,6 @@ import JpaBoardListPage from "@/views/lecture/board/JpaBoardListPage.vue"
 import JpaBoardRegisterPage from "@/views/lecture/board/JpaBoardRegisterPage.vue"
 
 import JpaBoardReadPage from "@/views/lecture/board/JpaBoardReadPage.vue"
-
 Vue.use(VueRouter)
 
 const routes = [

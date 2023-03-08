@@ -23,12 +23,20 @@ export default {
             .then((res) => {
                 commit(REQUEST_BOARD_LIST_TO_SPRING, res.data)
             })
-
     },
     requestBoardToSpring ({ commit }, boardId) {
         return axios.get(`http://localhost:7777/board/${boardId}`)
             .then((res) => {
                 commit(REQUEST_BOARD_TO_SPRING, res.data)
+            })
+    },
+    requestDeleteBoardToSpring ({}, boardId) {
+        return axios.delete(`http://localhost:7777/board/${boardId}`)
+            .then(() => {
+                alert("삭제 성공")
+            })
+            .catch(() => {
+                alert("문제 발생!")
             })
     }
 }

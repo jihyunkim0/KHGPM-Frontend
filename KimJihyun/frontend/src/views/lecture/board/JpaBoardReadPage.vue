@@ -30,8 +30,11 @@
       methods: {
           ...mapActions([
               'requestBoardToSpring',
+              'requestDeleteBoardToSpring'
           ]),
-          onDelete () {
+          async onDelete () {
+            await this.requestDeleteBoardToSpring(this.boardId)
+            await this.$router.push({ name: 'JpaBoardListPage' })
           }
       },
       created () {
