@@ -13,6 +13,8 @@ import JpaBoardListPage from "@/views/lecture/board/JpaBoardListPage.vue"
 import JpaBoardRegisterPage from "@/views/lecture/board/JpaBoardRegisterPage.vue"
 
 import JpaBoardReadPage from "@/views/lecture/board/JpaBoardReadPage.vue"
+
+import JpaBoardModifyPage from "@/views/lecture/board/JpaBoardModifyPage.vue"
 Vue.use(VueRouter)
 
 const routes = [
@@ -66,6 +68,17 @@ const routes = [
       default: true
     }
   },
+  {
+    path: '/board-modify/:boardId',
+    name: 'JpaBoardModifyPage',
+    components: {
+      default: JpaBoardModifyPage
+    },
+    props: {
+      default: true
+    }
+  },
+
 
   
 ]
