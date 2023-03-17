@@ -11,7 +11,9 @@ export default {
     components: {JpaProductRegisterForm},
     name: "JpaProductRegisterPage",
     methods: {
-     
+        onSubmit (payload) {
+            console.log(payload)
+        }
     }
     
 }
