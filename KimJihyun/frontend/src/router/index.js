@@ -16,8 +16,10 @@ import JpaBoardReadPage from "@/views/lecture/board/JpaBoardReadPage.vue"
 
 import JpaBoardModifyPage from "@/views/lecture/board/JpaBoardModifyPage.vue"
 
-import JpaProductListPage from "@/views/lecture/product/JpaProductListPage.vue"
 import JpaProductRegisterPage from "@/views/lecture/product/JpaProductRegisterPage.vue"
+
+import JpaProductListPage from "@/views/lecture/product/JpaProductListPage.vue"
+
 import JpaProductReadPage from "@/views/lecture/product/JpaProductReadPage.vue"
 import JpaProductModifyPage from "@/views/lecture/product/JpaProductModifyPage.vue"
 
@@ -86,17 +88,17 @@ const routes = [
     }
   },
 
-
-  {
-    path: '/product-list-page',
-    name: 'JpaProductListPage',
-    component: JpaProductListPage
-  },
   {
     path: '/product-register',
     name: 'JpaProductRegisterPage',
     component: JpaProductRegisterPage
   },
+  {
+    path: '/product-list-page',
+    name: 'JpaProductListPage',
+    component: JpaProductListPage
+  },
+
   {
     path: '/product-read/:productId',
     name: 'JpaProductReadPage',
