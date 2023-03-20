@@ -7,7 +7,7 @@
       <router-link :to="{ name: 'JpaProductModifyPage', params: { productId } }">
         게시물 수정
       </router-link>
-    
+      <button @click="onDelete">삭제</button>
       <router-link :to="{ name: 'JpaProductListPage' }">
         돌아가기
       </router-link>
@@ -33,8 +33,13 @@ export default {
     methods: {
         ...mapActions([
             'requestProductToSpring',
+            'requestDeleteProductToSpring',
            
         ]),
+        async onDelete () {
+            await this.requestDeleteProductToSpring(this.productId)
+            await this.$router.push({ name: 'JpaProductListPage' })
+        }
        
     },
     created () {

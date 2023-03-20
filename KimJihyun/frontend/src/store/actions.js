@@ -80,6 +80,16 @@ export default {
                 commit(REQUEST_PRODUCT_TO_SPRING, res.data)
             })
     },
+    requestDeleteProductToSpring ({}, productId) {
+        return axios.delete(`http://localhost:7777/product/${productId}`)
+            .then(() => {
+                alert("삭제 성공")
+            })
+            .catch(() => {
+                alert("문제 발생!")
+            })
+    },
+
 
 
     
